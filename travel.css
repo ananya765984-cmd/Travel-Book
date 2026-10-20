@@ -1,0 +1,275 @@
+body { background: lightyellow; }
+/* ---------- Basic reset ---------- */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body { font-family: Arial, sans-serif; color: #222; line-height: 1.6; }
+a { text-decoration: none; color: inherit; }
+ul { list-style: none; }
+
+
+
+/* ---------- 2. Main header ---------- */
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 40px;
+  background: #fff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: #d35400;
+}
+
+.nav-menu { display: flex; gap: 28px; }
+.nav-menu > li { position: relative; }
+.nav-menu a {
+  font-weight: bold;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+}
+.nav-menu a:hover { color: #d35400; }
+
+/* Dropdown: hidden until you hover over the menu item */
+.dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 220px;
+  background: #fff;
+  padding: 8px 0;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+.dropdown li a {
+  display: block;
+  padding: 10px 16px;
+  font-weight: normal;
+  text-transform: none;
+}
+.nav-menu li:hover .dropdown { display: block; }
+
+/* Icon buttons on the right */
+.header-icons { display: flex; gap: 10px; }
+.header-icons button {
+  padding: 8px 14px;
+  border: 1px solid #333;
+  border-radius: 20px;
+  background: none;
+  cursor: pointer;
+}
+.header-icons button:hover { background: #d35400; color: #fff; border-color: #d35400; }
+
+/* ---------- 3. Page banner ---------- */
+.page-banner {
+  height: 300px;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+              url("Dzukou-Valley-Nagaland.jpg") center / cover no-repeat;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 0 40px 40px;
+}
+.breadcrumb { margin-bottom: 10px; font-size: 0.95rem; }
+.breadcrumb a:hover { text-decoration: underline; }
+.page-banner h1 { font-size: 3rem; }
+.page-banner p{margin-bottom: 10px; font-size: 0.95rem;}
+
+
+/* ---------- 4. Intro text ---------- */
+.intro {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 40px;
+  font-size: 1.2rem;
+}
+
+/* ---------- 6. Footer ---------- */
+.site-footer {
+  background: #111;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+/* ---------- Phones and small screens ---------- */
+@media (max-width: 800px) {
+  .top-strip { display: none; }
+
+  .main-header {
+    flex-direction: column;
+    gap: 12px;
+    padding: 12px 16px;
+  }
+  .nav-menu { flex-wrap: wrap; justify-content: center; gap: 14px; }
+  .dropdown { display: none !important; }   /* dropdowns come back with JavaScript later */
+
+  .page-banner { height: 220px; padding: 0 16px 24px; }
+  .page-banner h1 { font-size: 2rem; }
+
+  .intro { padding: 0 16px; font-size: 1rem; }
+  /* ---------- Sections ---------- */
+.section {
+  max-width: 1100px;
+  margin: 60px auto;
+  padding: 0 20px;
+}
+.section h2 { font-size: 2rem; margin-bottom: 6px; }
+.section-sub { color: #666; margin-bottom: 30px; }
+
+/* ---------- Cards ---------- */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  transition: transform 0.2s;
+}
+.card:hover { transform: translateY(-6px); }
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+.card-body { padding: 18px; }
+.card-body h3 { margin-bottom: 8px; }
+.card-body p { color: #555; margin-bottom: 12px; }
+
+.tags { display: flex; flex-wrap: wrap; gap: 8px; }
+.tags span {
+  background: #fdebd9;
+  color: #d35400;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+}
+/* ---------- Colours (change these to restyle the whole site) ---------- */
+:root {
+  --ink: #1d2b2a;
+  --accent: #0f5b5a;
+  --accent-soft: #dcecea;
+  --highlight: #f2a900;
+  --muted: #5a6665;
+}
+
+/* ---------- Basic reset ---------- */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: Arial, sans-serif;
+  color: var(--ink);
+  line-height: 1.6;
+}
+a { text-decoration: none; color: inherit; }
+ul { list-style: none; }
+h1, h2, h3, .logo { font-family: 'DynaPuff', Arial, sans-serif; }
+
+/* ---------- 1. Top strip ---------- */
+.top-strip {
+  display: flex;
+  justify-content: space-between;
+  background: var(--ink);
+  color: #fff;
+  padding: 8px 40px;
+  font-size: 0.85rem;
+}
+.top-links-left,
+.top-links-right { display: flex; gap: 20px; }
+.top-strip a:hover { color: var(--highlight); }
+
+/* ---------- 2. Main header ---------- */
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 40px;
+  background: #fff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+  color: var(--accent);
+}
+
+.nav-menu { display: flex; gap: 28px; }
+.nav-menu > li { position: relative; }
+.nav-menu a { font-weight: bold; font-size: 0.9rem; }
+.nav-menu a:hover { color: var(--accent); }
+
+/* Dropdown: hidden until you hover or tab onto the menu item */
+.dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 220px;
+  background: #fff;
+  padding: 8px 0;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+.dropdown li a {
+  display: block;
+  padding: 10px 16px;
+  font-weight: normal;
+}
+.dropdown li a:hover { background: var(--accent-soft); }
+.nav-menu li:hover .dropdown,
+.nav-menu li:focus-within .dropdown { display: block; }
+
+/* ---------- 3. Banner ---------- */
+.page-banner {
+  min-height: 340px;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+              url("Dzukou-Valley-Nagaland.jpg") center / cover no-repeat;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 40px;
+}
+.page-banner h1 { font-size: 3rem; line-height: 1.15; max-width: 14ch; }
+.page-banner p { margin-top: 10px; font-size: 1.15rem; }
+
+/* ---------- 4. Intro ---------- */
+.intro {
+  max-width: 760px;
+  margin: 40px auto;
+  padding: 0 20px;
+  font-size: 1.2rem;
+}
+
+/* ---------- Sections ---------- */
+.section {
+  max-width: 1100px;
+  margin: 60px auto;
+  padding: 0 20px;
+}
+.section h2 { font-size: 2rem; margin-bottom: 6px; }
+.section-sub { color: var(--muted); margin-bottom: 30px; }
+
+/* ---------- Cards ---------- */
+
+}

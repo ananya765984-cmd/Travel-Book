@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="travel.css">
+    <link rel="stylesheet" href="travel.css">
+    <link rel="stylesheet" href="cards.css">
+    
+
+</head>
+
+
+<body>
+    
+
+  <!-- 2. MAIN HEADER: logo, menu, icon buttons -->
+  <header class="main-header">
+    <a href="index.html" class="logo">TRAVEL BOOK</a>
+
+    <nav>
+      <ul class="nav-menu">
+        <li>
+          <a href="#things-to-do">Things to do</a>
+          <ul class="dropdown">
+            <li><a href="#">Culture</a></li>
+            <li><a href="#">Nature &amp; wildlife</a></li>
+            <li><a href="#">Food &amp; drinks</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#where-to-go">Where to go</a>
+          <ul class="dropdown">
+            <li><a href="#">Beaches</a></li>
+            <li><a href="#">Mountains &amp; hill stations</a></li>
+            <li><a href="#">Other landscapes</a></li>
+          </ul>
+        </li>
+        <li><a href="#faqs">FAQs</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="header-icons">
+      <button type="button" aria-label="Search">Search</button>
+      <button type="button" aria-label="Map">Map</button>
+      <button type="button" aria-label="Account">Account</button>
+    </div>
+    <button id="menu-toggle" class="menu-toggle" aria-label="Open menu" aria-expanded="false">☰</button>
+  </header>
+
+  <main>
+
+    <!-- 3. PAGE BANNER: background image, breadcrumb, page title -->
+    <section class="page-banner">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="index.html">Home</a> /
+        <a href="#">Plan your trip</a> /
+        <span>Travel inspiration</span>
+      </nav>
+      <h1>Travel inspiration</h1>
+      <p>One country. A thousand stories.</p>
+    </section>
+
+    <!-- 4. INTRO TEXT -->
+    <section class="intro">
+      <p>
+        Every corner of India has a story to tell. From breathtaking landscapes and ancient monuments to vibrant festivals and unforgettable food, there's always something new to discover. Let Travel Book be your companion as you explore the places, people, and experiences that make India extraordinary..
+      </p>
+    </section>
+    <section id="things-to-do" class="section">
+  <h2>Things to do</h2>
+  <p class="section-sub">Pick what you love and start planning.</p>
+
+  <div class="card-grid">
+
+    <article class="card">
+      <img src="mehrangarh fort.jpg" alt="Heritage monument in India">
+      <div class="card-body">
+        <h3>Culture</h3>
+        <p>Forts, temples, art and the stories behind them.</p>
+        <div class="tags">
+          <span>Heritage</span>
+          <span>Art &amp; museums</span>
+        </div>
+      </div>
+    </article>
+
+    <article class="card">
+      <img src="double-decker-living-root-bridge-cherrapunjee-meghalaya-1-attr-hero.jpg" alt="Wildlife in an Indian national park">
+      <div class="card-body">
+        <h3>Nature &amp; wildlife</h3>
+        <p>Wild places, wild animals and natural wonders.</p>
+        <div class="tags">
+          <span>Natural wonders</span>
+          <span>Wildlife</span>
+          <span>Parks</span>
+        </div>
+      </div>
+    </article>
+
+    <article class="card">
+      <img src="street food.jpg" alt="Indian street food">
+      <div class="card-body">
+        <h3>Food &amp; drinks</h3>
+        <p>Regional flavours worth travelling for.</p>
+        <div class="tags">
+          <span>Street food</span>
+          <span>Local drinks</span>
+        </div>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+    <!-- 5. ADD MORE CONTENT SECTIONS BELOW (cards, lists, etc.) -->
+
+  </main>
+
+  <!-- 6. FOOTER -->
+  <footer class="site-footer">
+    <p>&copy; 2026 Travel Book. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+
+  <section id="where-to-go" class="section">
+  <h2>Where to go</h2>
+  <p class="section-sub">Beaches, hill stations and landscapes across India.</p>
+
+  <div class="filters">
+    <button class="filter-btn active" data-filter="all">All</button>
+    <button class="filter-btn" data-filter="beaches">Beaches</button>
+    <button class="filter-btn" data-filter="hills">Hill stations</button>
+    <button class="filter-btn" data-filter="landscapes">Other landscapes</button>
+  </div>
+
+  <div class="card-grid">
+
+    <article class="card dest-card" data-category="beaches">
+      <img src="varkala.jpg" alt="Cliffside beach at Varkala">
+      <div class="card-body">
+        <h3>Varkala</h3>
+        <p class="place">Kerala</p>
+        <p>A beach below tall red cliffs.</p>
+      </div>
+    </article>
+
+    <article class="card dest-card" data-category="beaches">
+      <img src="places-to-visit-in-andaman-compressed.jpg" alt="White sand at Radhanagar Beach">
+      <div class="card-body">
+        <h3>Radhanagar Beach</h3>
+        <p class="place">Andaman Islands</p>
+        <p>Soft white sand and clear water.</p>
+      </div>
+    </article>
+
+    <article class="card dest-card" data-category="hills">
+      <img src="munnar.jpg" alt="Tea plantations in Munnar">
+      <div class="card-body">
+        <h3>Munnar</h3>
+        <p class="place">Kerala</p>
+        <p>Rolling hills covered in tea gardens.</p>
+      </div>
+    </article>
+
+    <article class="card dest-card" data-category="hills">
+      <img src="manali.jpg" alt="Snow-capped mountains near Manali">
+      <div class="card-body">
+        <h3>Manali</h3>
+        <p class="place">Himachal Pradesh</p>
+        <p>Snowy peaks and mountain air.</p>
+      </div>
+    </article>
+
+    <article class="card dest-card" data-category="landscapes">
+      <img src="jaisalmer.jpg" alt="Sand dunes near Jaisalmer">
+      <div class="card-body">
+        <h3>Jaisalmer</h3>
+        <p class="place">Rajasthan</p>
+        <p>Golden dunes of the Thar Desert.</p>
+      </div>
+    </article>
+
+    <article class="card dest-card" data-category="landscapes">
+      <img src="m_Alleppey_tv_destination_img_1_l_645_859.avif" alt="Houseboat on the Alleppey backwaters">
+      <div class="card-body">
+        <h3>Alleppey</h3>
+        <p class="place">Kerala</p>
+        <p>Quiet backwaters and houseboats.</p>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+
+<script>
+  // ---------- Filter buttons ----------
+  const filterButtons = document.querySelectorAll(".filter-btn");
+  const destCards = document.querySelectorAll(".dest-card");
+
+  filterButtons.forEach(function (button) {
+    button.addEventListener("click", function () {
+      filterButtons.forEach(function (b) { b.classList.remove("active"); });
+      button.classList.add("active");
+
+      const chosen = button.dataset.filter;
+      destCards.forEach(function (card) {
+        if (chosen === "all" || card.dataset.category === chosen) {
+          card.style.display = "";
+        } else {
+          card.style.display = "none";
+        }
+      });
+    });
+  });
+
+  // ---------- FAQ accordion ----------
+  document.querySelectorAll(".faq-question").forEach(function (question) {
+    question.addEventListener("click", function () {
+      const item = question.parentElement;
+      const isOpen = item.classList.contains("open");
+
+      document.querySelectorAll(".faq-item").forEach(function (other) {
+        other.classList.remove("open");
+        other.querySelector(".faq-icon").textContent = "+";
+      });
+
+      if (!isOpen) {
+        item.classList.add("open");
+        question.querySelector(".faq-icon").textContent = "−";
+      }
+    });
+  });
+ 
+  // ---------- Hamburger menu ----------
+  const menuToggle = document.getElementById("menu-toggle");
+  const navMenu = document.querySelector(".nav-menu");
+
+  if (menuToggle && navMenu) {
+    menuToggle.addEventListener("click", function () {
+      const isOpen = navMenu.classList.toggle("open");
+      menuToggle.textContent = isOpen ? "✕" : "☰";
+      menuToggle.setAttribute("aria-expanded", isOpen);
+    });
+
+    // Close the menu after tapping a link
+    navMenu.querySelectorAll("a").forEach(function (link) {
+      link.addEventListener("click", function () {
+        navMenu.classList.remove("open");
+        menuToggle.textContent = "☰";
+        menuToggle.setAttribute("aria-expanded", "false");
+      });
+    });
+  }
+  console.log("buttons found:", filterButtons.length, "cards found:", destCards.length);
+</script>
+
+</body>
+</html>
